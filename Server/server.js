@@ -16,11 +16,8 @@ connection.once("open", function() {
     console.log("Connection with MongoDB was successful");
   });
  
-
-
 // get user data
   
-
   app.get("/details", (req, res) => {
 res.send(api);
      
