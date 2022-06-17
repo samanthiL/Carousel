@@ -1,4 +1,3 @@
-/** @jsx jsx */
 import React, { memo } from 'react'
 import { css, jsx } from '@emotion/core'
 import leftArrow from '../img/left-arrow.svg'

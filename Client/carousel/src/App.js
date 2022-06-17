@@ -13,9 +13,7 @@ export default class App extends React.Component {
     person:[]
   }
 
-  componentDidMount = () =>{
-    //     this.showDivs(slideIndex);
-         
+  componentDidMount = () =>{         
         axios.get('http://localhost:3600/details')
           .then(res => {
     
@@ -29,13 +27,9 @@ export default class App extends React.Component {
 render() {
 
 
-  console.log("oioio",this.state.person);
   return (
-<p>ss</p>
 
-// <Slider slides={this.o} />,
-    // <Slider />
-
+<Slider slides={this.state.person} />
 
   )
 }

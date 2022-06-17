@@ -1,4 +1,3 @@
-/** @jsx jsx */
 import React, { useState, useEffect, useRef, useCallback } from 'react'
 import { css, jsx } from '@emotion/core'
 import SliderContent from './SliderContent'
@@ -12,10 +11,10 @@ const getWidth = () => window.innerWidth
  * @function Slider
  */
 const Slider = props => {
-  const { slides } = props
-
+  const { slides} = props
+console.log("slider",slides);
   const firstSlide = slides[0]
-  const secondSlide = slides[1]
+  const secondSlide = slides.image[1]
   const lastSlide = slides[slides.length - 1]
 
   const [state, setState] = useState({
@@ -77,5 +76,4 @@ const SliderCSS = css`
   overflow: hidden;
 
 `
-
 export default Slider
