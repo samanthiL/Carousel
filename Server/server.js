@@ -3,7 +3,7 @@ const app = express();
 const cors = require("cors");
 const PORT = 3600;
 app.use(cors());
-app.use("/",router);
+// app.use("/",router);
 app.use(express.json())
 var api = require("./Api.json");
 

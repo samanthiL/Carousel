@@ -1,41 +1,43 @@
+import "./App.css";
 
-     import React from 'react';
-     import axios from 'axios';
-  
+import React from 'react';
+import axios from 'axios';
+import Slider from "./components/Slider.js";
+
+
 export default class App extends React.Component {
-       state = {
-         id: '',
-         persons:[],
-         person:[]
-       }
-       
-     componentDidMount = () =>{
-     
-       axios.get('http://localhost:3600/details')
-         .then(res => {
 
-          console.log("ss",res.data);
+  state = {
+    index: 0,
+    persons:[],
+    person:[]
+  }
 
-          this.setState({
-            person: res.data.food,
-          })})
-        }
-       render() {
-     console.log("ff",this.state.person);
-         return (
-           
-      <div>
-{this.state.person.map(id => 
-  <div>
-<h1>{id.name}</h1>
-<img src={id.image} className="App-logo" alt="logo" />
-  </div>
-)}
-      </div>         
-          
+  componentDidMount = () =>{
+    //     this.showDivs(slideIndex);
+         
+        axios.get('http://localhost:3600/details')
+          .then(res => {
     
-     
-         )
+           console.log("ss",res.data);
+    
+           this.setState({
+             person: res.data.food,
+           })})
+         }
+        
+render() {
 
-       }
-      }
+
+  console.log("oioio",this.state.person);
+  return (
+<p>ss</p>
+
+// <Slider slides={this.o} />,
+    // <Slider />
+
+
+  )
+}
+}
+
